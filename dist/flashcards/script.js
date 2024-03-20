@@ -6,10 +6,16 @@ const creatBox = document.getElementById("creatBox");
 
 cardArr = [];
 
-
+let dbl = 0;
 function dblclick() {
-    addEventListener("dblclick", function () {
-        this.document.getElementById("answerHidden").style.display = "block"
+    addEventListener("click", () => {
+        if (dbl == 0) {
+            this.document.getElementById("answerHidden").style.display = "block"
+            dbl = 1;
+        } else {
+            this.document.getElementById("answerHidden").style.display = "none"
+            dbl = 0;
+        }
     })
 }
 
@@ -22,14 +28,15 @@ function addFlashcard() {
     <h2 class="py-2 px-4 font-medium">${que}</h2>
     <p id="answerHidden" class="text-center font-bold text-xl mt-5 text-red-400 h-full hidden ">${ans}</p>
 </div>`
-
     var arrCards = cardArr += clutter
     cards.innerHTML = arrCards;
 
+    answer.value = "";
+    question.value = "";
 }
 
 function delFlashcards() {
-
+    console.log(cardArr);
 }
 
 function hideFlashcard() {

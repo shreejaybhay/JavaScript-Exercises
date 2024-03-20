@@ -32,6 +32,9 @@
             margin: 10px;
             background-color: #D1D5DB;
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
 
         .card h2 {
@@ -47,7 +50,8 @@
         <div>
             <button onclick="showCreateCardBox()" class="bg-gray-500 p-2 rounded-lg text-white font-medium">Create
                 Card</button>
-            <button class="bg-gray-500 p-2 rounded-lg text-white font-medium">Del Cards</button>
+            <button onclick="delFlashcards()" class="bg-gray-500 p-2 rounded-lg text-white font-medium">Del
+                Cards</button>
         </div>
     </nav>
 
